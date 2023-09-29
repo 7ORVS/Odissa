@@ -4,6 +4,7 @@ import VirusTotal as VT
 import os
 
 
+print("Welcome to Odissa....")
 
 Binary_Path = input("Enter the binary path(Full path please): ")
 
@@ -20,9 +21,11 @@ if VT_Choise == 'y' or VT_Choise == 'Y':
     if API_KEY is not None:
         VT.main(API_KEY, Binary_Path,  directory_name)
 
+print("Analyzing Starting................")
 
 pc_yara.Packing_Crypto_Detection(Binary_Path, directory_path)
 
 R2.GetStaticAnalysisInformation(Binary_Path, directory_path)        
 
-
+print("Analyzing finished................")
+print("Check to folder contained files in the tool folder....")

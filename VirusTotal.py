@@ -49,7 +49,7 @@ def Sandbox_result (ID , OutputFolder, API_KEY):
     with open(OutputFolder+"/Microsoft_Sysinternal_Sandbox.txt", "w") as output:
         if "error" in json_Data:
             output.write(json_Data["error"]["message"])  
-            
+            output.write("Try to upload the binary manually and check another sandbox's results.")
 
         else:
             interesting_data = json_Data["data"]["attributes"]
